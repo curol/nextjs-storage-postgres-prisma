@@ -55,3 +55,43 @@ pnpm dev
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) ([Documentation](https://nextjs.org/docs/deployment)).
+
+## Getting started
+
+### Vercel
+
+Init Vercel project.
+
+1. Login to vercel
+
+```
+vercel login
+```
+
+2. Link vercel project 
+
+```bash
+vercel link
+```
+
+3. Pull project's env variables
+
+```bash
+vercel env pull .env.development.local
+```
+
+### DB
+
+Init database.
+
+1. Create migrations from your Prisma schema, apply them to the database, generate artifacts (e.g. Prisma Client)
+
+```bash
+pnpm db:migrate
+```
+
+2. Seed database
+
+```bash
+pnpm db:seed
+```
